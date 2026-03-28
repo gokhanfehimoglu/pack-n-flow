@@ -18,59 +18,64 @@ MonoBehaviour:
   - Id: 0
     Color:
       serializedVersion: 2
-      rgba: 4278221531
+      rgba: 4282833664
     UnitColorToken: 0
   - Id: 1
     Color:
       serializedVersion: 2
-      rgba: 4289083509
+      rgba: 4294346749
     UnitColorToken: 1
+  - Id: 2
+    Color:
+      serializedVersion: 2
+      rgba: 4282203611
+    UnitColorToken: 2
   blockZoneWidth: 5
   blockZoneHeight: 5
   blockZoneCellSize: 0.25
   blockEntries:
   - Coordinates: {x: 0, y: 0}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 0, y: 1}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 0, y: 2}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 0, y: 3}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 0, y: 4}
     ColorId: 1
   - Coordinates: {x: 1, y: 0}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 1, y: 1}
-    ColorId: 0
+    ColorId: 1
   - Coordinates: {x: 1, y: 2}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 1, y: 3}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 1, y: 4}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 2, y: 0}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 2, y: 1}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 2, y: 2}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 2, y: 3}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 2, y: 4}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 3, y: 0}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 3, y: 1}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 3, y: 2}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 3, y: 3}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 3, y: 4}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 4, y: 0}
-    ColorId: 0
+    ColorId: 2
   - Coordinates: {x: 4, y: 1}
     ColorId: 0
   - Coordinates: {x: 4, y: 2}
