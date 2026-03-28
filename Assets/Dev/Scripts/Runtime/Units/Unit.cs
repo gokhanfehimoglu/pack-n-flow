@@ -177,7 +177,6 @@ namespace PackNFlow
         public void LeaveConveyor()
         {
             Phase = UnitPhase.Stored;
-            _isFrontUnit = false;
             _isOnSpline = false;
             _activeScale = _baseScale;
         }
