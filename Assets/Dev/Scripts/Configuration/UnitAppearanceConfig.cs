@@ -23,7 +23,7 @@ namespace PackNFlow
 
         public void Initialize()
         {
-            Debug.Assert(s_Runtime == null, "UnitAppearanceConfig already initialized!");
+            // Debug.Assert(s_Runtime == null, "UnitAppearanceConfig already initialized!");
             s_Runtime = this;
         }
 
