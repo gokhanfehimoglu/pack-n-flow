@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c857b7d9ea1479f48afb13e0348a14f2, type: 3}
   m_Name: UnitAppearanceConfig
   m_EditorClassIdentifier: Assembly-CSharp::PackNFlow.UnitAppearanceConfig
-  defaultMaterial: {fileID: 0}
-  concealed: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: 87e313848f58d09499d4dbf1a2893220, type: 2}
+  concealed: {fileID: 2100000, guid: 87e313848f58d09499d4dbf1a2893220, type: 2}
+  defaultRopeMaterial: {fileID: 2100000, guid: 4a40baef06d572540b3a6e1bb16c1ecb, type: 2}
+  concealedRope: {fileID: 2100000, guid: 4a40baef06d572540b3a6e1bb16c1ecb, type: 2}

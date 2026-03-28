@@ -7,5 +7,7 @@ namespace PackNFlow
     public class UnitColumnData
     {
         public List<UnitData> entries = new();
+
+        public List<UnitData> Entries => entries;
     }
 }

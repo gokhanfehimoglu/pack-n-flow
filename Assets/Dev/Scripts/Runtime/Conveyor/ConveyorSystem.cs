@@ -69,9 +69,9 @@ namespace PackNFlow
             if (_warningSeq == null || !_warningSeq.IsActive())
             {
                 _warningSeq = DOTween.Sequence();
-                _warningSeq.Append(capacityLabel.DOColor(Color.crimson, 0.2f));
+                _warningSeq.Append(capacityLabel.DOColor(Color.red, 0.2f));
                 _warningSeq.Append(capacityLabel.DOColor(Color.white, 0.2f));
-                _warningSeq.Append(capacityLabel.DOColor(Color.crimson, 0.2f));
+                _warningSeq.Append(capacityLabel.DOColor(Color.red, 0.2f));
                 _warningSeq.Append(capacityLabel.DOColor(Color.white, 0.2f));
                 _warningSeq.OnKill(() => capacityLabel.color = Color.white);
             }

@@ -827,24 +827,24 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: DOTWEEN
-    EmbeddedLinux: DOTWEEN
-    GameCoreScarlett: DOTWEEN
-    GameCoreXboxOne: DOTWEEN
-    Kepler: DOTWEEN
-    LinuxHeadlessSimulation: DOTWEEN
-    Nintendo Switch: DOTWEEN
-    Nintendo Switch 2: DOTWEEN
-    PS4: DOTWEEN
-    PS5: DOTWEEN
-    QNX: DOTWEEN
-    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;DOTWEEN;DREAMTECK_SPLINES
-    VisionOS: DOTWEEN
-    WebGL: DOTWEEN
-    Windows Store Apps: DOTWEEN
-    XboxOne: DOTWEEN
-    iPhone: DOTWEEN
-    tvOS: DOTWEEN
+    Android: DOTWEEN;URP_OUTLINE
+    EmbeddedLinux: DOTWEEN;URP_OUTLINE
+    GameCoreScarlett: DOTWEEN;URP_OUTLINE
+    GameCoreXboxOne: DOTWEEN;URP_OUTLINE
+    Kepler: DOTWEEN;URP_OUTLINE
+    LinuxHeadlessSimulation: DOTWEEN;URP_OUTLINE
+    Nintendo Switch: DOTWEEN;URP_OUTLINE
+    Nintendo Switch 2: DOTWEEN;URP_OUTLINE
+    PS4: DOTWEEN;URP_OUTLINE
+    PS5: DOTWEEN;URP_OUTLINE
+    QNX: DOTWEEN;URP_OUTLINE
+    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;DOTWEEN;DREAMTECK_SPLINES;URP_OUTLINE
+    VisionOS: DOTWEEN;URP_OUTLINE
+    WebGL: DOTWEEN;URP_OUTLINE
+    Windows Store Apps: DOTWEEN;URP_OUTLINE
+    XboxOne: DOTWEEN;URP_OUTLINE
+    iPhone: DOTWEEN;URP_OUTLINE
+    tvOS: DOTWEEN;URP_OUTLINE
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

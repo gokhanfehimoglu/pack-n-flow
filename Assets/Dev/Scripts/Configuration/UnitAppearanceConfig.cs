@@ -27,11 +27,17 @@ namespace PackNFlow
             s_Runtime = this;
         }
 
-        [TitleGroup("Materials")]
+        [TitleGroup("Body Materials")]
         public Material defaultMaterial;
 
-        [TitleGroup("Materials")]
+        [TitleGroup("Body Materials")]
         public Material concealed;
+
+        [TitleGroup("Rope Materials")]
+        public Material defaultRopeMaterial;
+
+        [TitleGroup("Rope Materials")]
+        public Material concealedRope;
 
 #if UNITY_EDITOR
         private static UnitAppearanceConfig s_Editor;

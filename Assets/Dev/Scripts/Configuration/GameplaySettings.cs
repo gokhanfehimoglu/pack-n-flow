@@ -1,3 +1,4 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
@@ -27,7 +28,7 @@ namespace PackNFlow
             s_Runtime = this;
         }
 
-        [System.Serializable]
+        [Serializable]
         public struct ConveyorConfig
         {
             public float gapBetweenCarriages;
@@ -36,12 +37,13 @@ namespace PackNFlow
             public float carriageFollowSpeed;
         }
 
-        [System.Serializable]
+        [Serializable]
         public struct UnitConfig
         {
             public float unitGridZOffsetByCellSize;
-            public float pullEffectSpeed;
+            public float pullDuration;
             public float unitBoardDuration;
+            public float unitBoardScale;
             public float unitBoardArcHeight;
             public float minDeployInterval;
         }

@@ -23,10 +23,7 @@ namespace PackNFlow
                     continue;
 
                 if (tryPull(unit, block, edge))
-                {
-                    block.MarkForRemoval();
                     pulled++;
-                }
             }
 
             return pulled;

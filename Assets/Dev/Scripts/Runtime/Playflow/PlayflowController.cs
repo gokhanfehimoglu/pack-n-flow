@@ -12,7 +12,8 @@ namespace PackNFlow
         [SerializeField] private PixelBlockController pixelBlockController;
         [SerializeField] private UnitController unitController;
         [SerializeField] private UnitRackController rackController;
-        [SerializeField] private GridAndRackVisualizer gridAndRackVisualizer;
+        [SerializeField] private RackManager rackManager;
+        [SerializeField] private GridManager gridManager;
 
         [Header("Prefabs")]
         [SerializeField] private Unit unitPrefab;
@@ -80,10 +81,14 @@ namespace PackNFlow
             var levelData = _levelDirector.ActiveLevelData;
 
             conveyor.Prepare(levelData.conveyorCarriageCount);
+            unitController.Initialize(conveyor.Bounds.Value);
+            unitController.ReadyCarriageCount = levelData.conveyorCarriageCount;
             unitController.Prepare(conveyor.Bounds.Value);
+            pixelBlockController.Initialize(conveyor.Bounds.Value);
             pixelBlockController.Prepare(conveyor.Bounds.Value);
-            gridAndRackVisualizer.Prepare(unitController.UnitGrid);
-            rackController.Prepare(gridAndRackVisualizer.RackPieces);
+            rackManager.Prepare(unitController.UnitGrid);
+            rackController.Prepare(rackManager.Racks);
+            gridManager.Prepare(unitController.UnitGrid);
 
             IsReady = true;
         }
@@ -122,6 +127,7 @@ namespace PackNFlow
             _lastDeployTime = Time.time;
 
             conveyor.DispatchCarriage(carriage);
+            unitController.ReadyCarriageCount--;
             unitController.AddActiveUnit(unit);
 
             unit.OnBoardingCompleted += OnUnitBoarded;
@@ -148,6 +154,7 @@ namespace PackNFlow
         private void HandleUnitPathCompleted(Unit unit)
         {
             unitController.RemoveActiveUnit(unit);
+            unitController.ReadyCarriageCount++;
 
             if (unit.IsCapacityDepleted)
             {
@@ -173,6 +180,7 @@ namespace PackNFlow
         {
             unitController.RemoveActiveUnit(unit);
             conveyor.ReleaseCarriageForUnit(unit);
+            unitController.ReadyCarriageCount++;
             unitController.RefreshDeployableVisuals();
         }
 

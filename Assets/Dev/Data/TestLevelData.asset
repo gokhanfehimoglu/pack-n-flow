@@ -13,15 +13,96 @@ MonoBehaviour:
   m_Name: TestLevelData
   m_EditorClassIdentifier: Assembly-CSharp::PackNFlow.LevelData
   referenceTexture: {fileID: 2800000, guid: 882777db48e493e4db3215b337f34509, type: 3}
-  enableColorGrouping: 0
-  palette: []
-  blockZoneWidth: 20
-  blockZoneHeight: 20
-  blockZoneCellSize: 0.5
-  blockEntries: []
+  enableColorGrouping: 1
+  palette:
+  - Id: 0
+    Color:
+      serializedVersion: 2
+      rgba: 4278221531
+    UnitColorToken: 0
+  - Id: 1
+    Color:
+      serializedVersion: 2
+      rgba: 4289083509
+    UnitColorToken: 1
+  blockZoneWidth: 5
+  blockZoneHeight: 5
+  blockZoneCellSize: 0.25
+  blockEntries:
+  - Coordinates: {x: 0, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 0, y: 1}
+    ColorId: 0
+  - Coordinates: {x: 0, y: 2}
+    ColorId: 0
+  - Coordinates: {x: 0, y: 3}
+    ColorId: 0
+  - Coordinates: {x: 0, y: 4}
+    ColorId: 1
+  - Coordinates: {x: 1, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 1}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 2}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 3}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 4}
+    ColorId: 0
+  - Coordinates: {x: 2, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 2, y: 1}
+    ColorId: 0
+  - Coordinates: {x: 2, y: 2}
+    ColorId: 0
+  - Coordinates: {x: 2, y: 3}
+    ColorId: 0
+  - Coordinates: {x: 2, y: 4}
+    ColorId: 0
+  - Coordinates: {x: 3, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 3, y: 1}
+    ColorId: 0
+  - Coordinates: {x: 3, y: 2}
+    ColorId: 0
+  - Coordinates: {x: 3, y: 3}
+    ColorId: 0
+  - Coordinates: {x: 3, y: 4}
+    ColorId: 0
+  - Coordinates: {x: 4, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 4, y: 1}
+    ColorId: 0
+  - Coordinates: {x: 4, y: 2}
+    ColorId: 0
+  - Coordinates: {x: 4, y: 3}
+    ColorId: 0
+  - Coordinates: {x: 4, y: 4}
+    ColorId: 0
   unitColumnCount: 3
-  unitColumnDepth: 40
-  unitGridCellSize: 1
+  unitColumnDepth: 5
+  unitGridCellSize: 1.75
   rackSlotCount: 5
-  columnDataList: []
+  columnDataList:
+  - entries:
+    - Id: 0
+      PullCapacity: 5
+      ColorId: 0
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 0}
+      IsConcealed: 0
+  - entries:
+    - Id: 1
+      PullCapacity: 5
+      ColorId: 1
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 0}
+      IsConcealed: 0
+  - entries:
+    - Id: 2
+      PullCapacity: 5
+      ColorId: 0
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 0}
+      IsConcealed: 0
   conveyorCarriageCount: 5

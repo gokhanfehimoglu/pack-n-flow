@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: GameplaySettings
   m_EditorClassIdentifier: Assembly-CSharp::PackNFlow.GameplaySettings
   conveyor:
-    gapBetweenCarriages: 0
-    carriageToConveyorDuration: 0
-    carriageFromConveyorDuration: 0
-    carriageFollowSpeed: 0
+    gapBetweenCarriages: 0.2
+    carriageToConveyorDuration: 0.5
+    carriageFromConveyorDuration: 0.5
+    carriageFollowSpeed: 5
   units:
-    unitGridZOffsetByCellSize: 0
-    pullEffectSpeed: 0
-    unitBoardDuration: 0
-    unitBoardArcHeight: 0
-    minDeployInterval: 0
+    unitGridZOffsetByCellSize: 5.33
+    pullDuration: 0.4
+    unitBoardDuration: 0.5
+    unitBoardScale: 0.85
+    unitBoardArcHeight: 5
+    minDeployInterval: 0.2

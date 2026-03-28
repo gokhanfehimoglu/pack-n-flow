@@ -5,7 +5,7 @@ using PackNFlow.Core;
 
 namespace PackNFlow
 {
-    public class LevelDirector : MonoBehaviour
+    public class LevelDirector : Singleton<LevelDirector>
     {
         [SerializeField] private List<LevelData> levels = new();
 

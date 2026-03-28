@@ -28,27 +28,14 @@ namespace PackNFlow
         [Title("Conveyor")]
         public int conveyorCarriageCount = 5;
 
-        private Dictionary<int, LevelColor> _colorLookup;
-        private bool _lookupDirty = true;
-
-        private void EnsureLookupBuilt()
-        {
-            if (!_lookupDirty && _colorLookup != null) return;
-
-            _colorLookup = new Dictionary<int, LevelColor>(palette.Count);
-            foreach (var entry in palette)
-            {
-                if (!_colorLookup.ContainsKey(entry.Id))
-                    _colorLookup.Add(entry.Id, entry);
-            }
-
-            _lookupDirty = false;
-        }
-
         public Color32 GetColorById(int colorId)
         {
-            EnsureLookupBuilt();
-            return _colorLookup.TryGetValue(colorId, out var entry) ? entry.Color : new Color32(255, 255, 255, 255);
+            foreach (var entry in palette)
+            {
+                if (entry.Id == colorId)
+                    return entry.Color;
+            }
+            return new Color32(255, 255, 255, 255);
         }
 
         public int RegisterColor(Color32 color, float tolerance = 0f)
@@ -65,7 +52,6 @@ namespace PackNFlow
 
             int newId = palette.Count > 0 ? palette[palette.Count - 1].Id + 1 : 0;
             palette.Add(new LevelColor(newId, color, newId));
-            _lookupDirty = true;
             return newId;
         }
 
@@ -92,7 +78,6 @@ namespace PackNFlow
 
             int newId = palette.Count > 0 ? palette[palette.Count - 1].Id + 1 : 0;
             palette.Add(new LevelColor(newId, color, groupToken >= 0 ? groupToken : newId));
-            _lookupDirty = true;
             return newId;
         }
 
@@ -101,10 +86,12 @@ namespace PackNFlow
             if (!enableColorGrouping)
                 return colorId;
 
-            EnsureLookupBuilt();
-            return _colorLookup.TryGetValue(colorId, out var entry) ? entry.UnitColorToken : colorId;
+            foreach (var entry in palette)
+            {
+                if (entry.Id == colorId)
+                    return entry.UnitColorToken;
+            }
+            return colorId;
         }
-
-        public void MarkPaletteDirty() => _lookupDirty = true;
     }
 }
