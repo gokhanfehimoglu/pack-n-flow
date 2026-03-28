@@ -188,21 +188,28 @@ namespace PackNFlow
             _remainingCapacity--;
             appearance.UpdateCapacityText(_remainingCapacity);
 
-            float duration = GameplaySettings.Instance.units.pullDuration;
-            target.PullToward(appearance.Muzzle, duration, PlayPullRecoil);
-
             if (_remainingCapacity <= 0)
             {
                 Phase = UnitPhase.Depleted;
                 _isFrontUnit = false;
                 appearance.UpdateCapacityText(0);
-                transform.SetParent(_originalParent);
-                OnCapacityDepleted?.Invoke(this);
-                DOVirtual.DelayedCall(0.5f, () =>
-                {
-                    gameObject.SetActive(false);
-                }).SetLink(gameObject);
+                target.PullToward(appearance.Muzzle, GameplaySettings.Instance.units.pullDuration, OnLastBlockArrived);
+                return;
             }
+
+            float duration = GameplaySettings.Instance.units.pullDuration;
+            target.PullToward(appearance.Muzzle, duration, PlayPullRecoil);
+        }
+
+        private void OnLastBlockArrived()
+        {
+            PlayPullRecoil();
+            transform.SetParent(_originalParent);
+            OnCapacityDepleted?.Invoke(this);
+            DOVirtual.DelayedCall(0.5f, () =>
+            {
+                gameObject.SetActive(false);
+            }).SetLink(gameObject);
         }
 
         private void PlayPullRecoil()
