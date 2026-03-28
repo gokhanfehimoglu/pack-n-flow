@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace PackNFlow
@@ -20,7 +19,8 @@ namespace PackNFlow
             return true;
         }
 
-        public static bool TryGetCoordsFromPosition(GridLayout layout, Vector3 worldPos, out Vector2Int coords, out Vector3 cellCenter)
+        public static bool TryGetCoordsFromPosition(GridLayout layout, Vector3 worldPos, out Vector2Int coords,
+            out Vector3 cellCenter)
         {
             float cellSize = layout.CellSize;
             int columns = layout.ColumnCount;
@@ -47,24 +47,24 @@ namespace PackNFlow
             return true;
         }
 
-        public static GridLayout BuildUnitGrid(StageData stageData, float conveyorMinZ)
+        public static GridLayout BuildUnitGrid(LevelData levelData, float conveyorMinZ)
         {
-            int columns = stageData.unitColumnCount;
-            float cellSize = stageData.unitGridCellSize;
-            int rows = stageData.unitColumnDepth;
+            int columns = levelData.unitColumnCount;
+            float cellSize = levelData.unitGridCellSize;
+            int rows = levelData.unitColumnDepth;
 
             float centerZ = conveyorMinZ -
                             (rows * cellSize * 0.5f) -
-                            (GameplaySettings.Instance.unitGridZOffsetByCellSize * cellSize);
+                            (GameplaySettings.Instance.units.unitGridZOffsetByCellSize * cellSize);
 
             Vector3 center = Vector3.forward * centerZ;
             return new GridLayout(cellSize, columns, rows, center);
         }
 
-        public static Vector3[] ComputeRackSlotPositions(StageData stageData, GridLayout unitGrid)
+        public static Vector3[] ComputeRackSlotPositions(LevelData levelData, GridLayout unitGrid)
         {
-            int slotCount = stageData.rackSlotCount;
-            float cellSize = stageData.unitGridCellSize;
+            int slotCount = levelData.rackSlotCount;
+            float cellSize = levelData.unitGridCellSize;
             Vector3[] positions = new Vector3[slotCount];
             float startX = -((cellSize / 2f) * slotCount);
 
@@ -91,14 +91,15 @@ namespace PackNFlow
                     idx++;
                 }
             }
+
             return positions;
         }
 
-        public static GridLayout BuildBlockZoneGrid(StageData stageData, Vector3 conveyorCenter)
+        public static GridLayout BuildBlockZoneGrid(LevelData levelData, Vector3 conveyorCenter)
         {
-            int columns = stageData.blockZoneWidth;
-            float cellSize = stageData.blockZoneCellSize;
-            int rows = stageData.blockZoneHeight;
+            int columns = levelData.blockZoneWidth;
+            float cellSize = levelData.blockZoneCellSize;
+            int rows = levelData.blockZoneHeight;
             Vector3 center = new Vector3(conveyorCenter.x, 0f, conveyorCenter.z);
             return new GridLayout(cellSize, columns, rows, center);
         }

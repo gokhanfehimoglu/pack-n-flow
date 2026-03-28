@@ -2,6 +2,6 @@ namespace PackNFlow
 {
     public static class GameSaveKeys
     {
-        public const string StageIndexKey = "PackNFlow_StageIndex";
+        public const string LevelIndexKey = "PackNFlow_LevelIndex";
     }
 }
