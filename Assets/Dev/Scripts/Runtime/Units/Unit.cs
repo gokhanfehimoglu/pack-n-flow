@@ -185,24 +185,27 @@ namespace PackNFlow
         {
             ScanData.RecordScan(side, target.Data.Coordinates);
             _remainingCapacity--;
-            appearance.UpdateCapacityText(_remainingCapacity);
 
             if (_remainingCapacity <= 0)
             {
                 Phase = UnitPhase.Depleted;
                 _isFrontUnit = false;
-                appearance.UpdateCapacityText(0);
                 target.PullToward(appearance.Muzzle, GameplaySettings.Instance.units.pullDuration, OnLastBlockArrived);
                 return;
             }
 
             float duration = GameplaySettings.Instance.units.pullDuration;
-            target.PullToward(appearance.Muzzle, duration, PlayPullRecoil);
+            target.PullToward(appearance.Muzzle, duration, () =>
+            {
+                PlayPullRecoil();
+                appearance.UpdateCapacityText(_remainingCapacity);
+            });
         }
 
         private void OnLastBlockArrived()
         {
             PlayPullRecoil();
+            appearance.UpdateCapacityText(0);
             transform.SetParent(_originalParent);
             OnCapacityDepleted?.Invoke(this);
             DOVirtual.DelayedCall(0.5f, () =>
