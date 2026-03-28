@@ -117,7 +117,7 @@ namespace PackNFlow
 
         public bool TryPullBlock(Unit unit, PixelBlock block, Edge edge)
         {
-            if (block == null || unit.IsCapacityDepleted) return false;
+            if (block == null || unit.IsCapacityDepleted || block.IsBeingPulled) return false;
 
             var levelData = LevelDirector.Instance.ActiveLevelData;
             int resolvedColorId = levelData.ResolveUnitColorToken(block.Data.ColorId);
