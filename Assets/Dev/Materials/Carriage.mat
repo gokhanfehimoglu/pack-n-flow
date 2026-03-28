@@ -16,6 +16,7 @@ Material:
   - TCP2_RIM_LIGHTING_LIGHTMASK
   - TCP2_SHADOW_LIGHT_COLOR
   - TCP2_SPECULAR
+  - _RECEIVE_SHADOWS_OFF
   m_InvalidKeywords:
   - TCP2_OUTLINE_CONST_SIZE
   - TCP2_UV_NORMALS_FULL
@@ -30,7 +31,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: d780558910081a2419c0563cb1a12fc5, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: -7.1732717}
     - _BumpMap:
@@ -155,7 +156,7 @@ Material:
     - _RampThreshold: 0.78
     - _RampType: 0
     - _ReceiveShadows: 1
-    - _ReceiveShadowsOff: 1
+    - _ReceiveShadowsOff: 0
     - _ReflectionMapType: 0
     - _ReflectionSmoothness: 0.797
     - _RenderingMode: 0
