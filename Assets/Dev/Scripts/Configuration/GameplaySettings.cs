@@ -30,7 +30,6 @@ namespace PackNFlow
         [System.Serializable]
         public struct ConveyorConfig
         {
-            [TitleGroup("Conveyor/Timing")]
             public float gapBetweenCarriages;
             public float carriageToConveyorDuration;
             public float carriageFromConveyorDuration;
@@ -40,13 +39,8 @@ namespace PackNFlow
         [System.Serializable]
         public struct UnitConfig
         {
-            [TitleGroup("Unit/Grid Layout")]
             public float unitGridZOffsetByCellSize;
-
-            [TitleGroup("Unit/Pull Effect")]
             public float pullEffectSpeed;
-
-            [TitleGroup("Unit/Boarding")]
             public float unitBoardDuration;
             public float unitBoardArcHeight;
             public float minDeployInterval;
