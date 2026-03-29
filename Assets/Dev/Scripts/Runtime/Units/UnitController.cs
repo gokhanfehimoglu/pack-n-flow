@@ -117,13 +117,13 @@ namespace PackNFlow
 
         public bool TryPullBlock(Unit unit, PixelBlock block, Edge edge)
         {
-            if (block == null || unit.IsCapacityDepleted || block.IsBeingPulled) return false;
+            if (block == null || unit.IsCapacityDepleted) return false;
 
             var levelData = LevelDirector.Instance.ActiveLevelData;
             int resolvedColorId = levelData.ResolveUnitColorToken(block.Data.ColorId);
             if (unit.Data.ColorId != resolvedColorId) return false;
 
-            if (!unit.ScanData.IsUnscanned(edge, block.Data.Coordinates)) return false;
+            if (!unit.ScanData.CanEngageLine(edge, block.Data.Coordinates)) return false;
 
             unit.TriggerPull(block, edge);
             return true;

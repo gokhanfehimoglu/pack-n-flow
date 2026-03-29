@@ -13,6 +13,7 @@ namespace PackNFlow
         private PixelBlock[,] _grid;
         private Bounds _blockZoneBounds;
         private GridLayout _blockGrid;
+        private readonly List<PixelBlock> _foundBuffer = new();
 
         private int _totalBlockCount;
         private int _clearedBlockCount;
@@ -70,9 +71,9 @@ namespace PackNFlow
                 OnAllBlocksCleared?.Invoke();
         }
 
-        public bool TryFindBlockForUnit(Unit unit, out PixelBlock block, out Edge edge)
+        public bool GatherBlocksForUnit(Unit unit, List<PixelBlock> results, out Edge edge)
         {
-            block = null;
+            results.Clear();
             edge = Edge.South;
 
             if (unit == null) return false;
@@ -89,17 +90,21 @@ namespace PackNFlow
             var currentPos = unitPos;
 
             scanSteps = Mathf.Max(1, scanSteps);
+            bool anyFound = false;
 
             for (var i = 1; i <= scanSteps; i++)
             {
                 var scanPos = PositionInterpolator.Interpolate(lastPos ?? currentPos, currentPos, i, scanSteps);
 
-                if (ScanLineForBlock(scanPos, edge, out block))
-                    return true;
+                if (ScanLineForBlock(scanPos, edge, out var block))
+                {
+                    results.Add(block);
+                    anyFound = true;
+                }
             }
 
             unit.ScanData.UpdateCheckPosition(currentPos);
-            return false;
+            return anyFound;
         }
 
         private int ComputeInterpolationSteps(Unit unit)
@@ -148,7 +153,7 @@ namespace PackNFlow
                 return false;
 
             var candidate = _grid[x, y];
-            if (candidate == null || candidate.IsMarkedForRemoval)
+            if (candidate == null || candidate.IsMarkedForRemoval || candidate.IsBeingPulled)
                 return false;
 
             block = candidate;

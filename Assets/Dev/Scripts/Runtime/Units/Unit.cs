@@ -35,6 +35,7 @@ namespace PackNFlow
         public Unit TetheredPartner { get; private set; }
 
         private int _remainingCapacity;
+        public int RemainingCapacity => _remainingCapacity;
         private Transform _originalParent;
         private Vector3 _baseScale;
         private Tweener _shakeTween;
@@ -183,7 +184,7 @@ namespace PackNFlow
 
         public void TriggerPull(PixelBlock target, Edge side)
         {
-            ScanData.RecordScan(side, target.Data.Coordinates);
+            ScanData.SealLine(side, target.Data.Coordinates);
             _remainingCapacity--;
 
             if (_remainingCapacity <= 0)
@@ -208,10 +209,22 @@ namespace PackNFlow
             appearance.UpdateCapacityText(0);
             transform.SetParent(_originalParent);
             OnCapacityDepleted?.Invoke(this);
-            DOVirtual.DelayedCall(0.5f, () =>
-            {
-                gameObject.SetActive(false);
-            }).SetLink(gameObject);
+            PlayDepleteAnimation();
+        }
+
+        private void PlayDepleteAnimation()
+        {
+            _boardSeq?.Kill();
+            DOTween.Kill(transform);
+
+            var duration = GameplaySettings.Instance.units.depleteDuration * 2f;
+
+            _boardSeq = DOTween.Sequence();
+            _boardSeq.Append(transform.DOLocalRotate(new Vector3(0, 360, 0), duration, RotateMode.FastBeyond360));
+            _boardSeq.Join(transform.DOLocalMoveY(1.5f, duration).SetEase(Ease.OutQuad));
+            _boardSeq.Join(transform.DOScale(Vector3.zero, duration).SetEase(Ease.InBack));
+            _boardSeq.OnComplete(() => gameObject.SetActive(false));
+            _boardSeq.SetLink(gameObject);
         }
 
         private void PlayPullRecoil()

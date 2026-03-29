@@ -5,12 +5,10 @@ namespace PackNFlow
 {
     public class UnitScanData
     {
-        private readonly HashSet<int> _southScan = new();
-        private readonly HashSet<int> _northScan = new();
-        private readonly HashSet<int> _eastScan = new();
-        private readonly HashSet<int> _westScan = new();
-
-        private static int HashCoord(Vector2Int c) => (c.x << 16) | (c.y & 0xFFFF);
+        private readonly HashSet<int> _rowsUsedFromSouth = new();
+        private readonly HashSet<int> _rowsUsedFromNorth = new();
+        private readonly HashSet<int> _colsUsedFromEast = new();
+        private readonly HashSet<int> _colsUsedFromWest = new();
 
         public Vector3? LastCheckPosition { get; private set; }
 
@@ -18,36 +16,41 @@ namespace PackNFlow
 
         public void Reset()
         {
-            _southScan.Clear();
-            _northScan.Clear();
-            _eastScan.Clear();
-            _westScan.Clear();
+            _rowsUsedFromSouth.Clear();
+            _rowsUsedFromNorth.Clear();
+            _colsUsedFromEast.Clear();
+            _colsUsedFromWest.Clear();
             LastCheckPosition = null;
         }
 
-        public bool HasScanned(Edge edge, Vector2Int coords)
+        public bool CanEngageLine(Edge edge, Vector2Int coords)
         {
             return edge switch
             {
-                Edge.South => _southScan.Contains(HashCoord(coords)),
-                Edge.East => _eastScan.Contains(HashCoord(coords)),
-                Edge.North => _northScan.Contains(HashCoord(coords)),
-                Edge.West => _westScan.Contains(HashCoord(coords)),
+                Edge.South => !_rowsUsedFromSouth.Contains(coords.x),
+                Edge.East => !_colsUsedFromEast.Contains(coords.y),
+                Edge.North => !_rowsUsedFromNorth.Contains(coords.x),
+                Edge.West => !_colsUsedFromWest.Contains(coords.y),
                 _ => false
             };
         }
 
-        public bool IsUnscanned(Edge edge, Vector2Int coords) => !HasScanned(edge, coords);
-
-        public void RecordScan(Edge edge, Vector2Int coords)
+        public void SealLine(Edge edge, Vector2Int coords)
         {
-            var hash = HashCoord(coords);
             switch (edge)
             {
-                case Edge.South: _southScan.Add(hash); break;
-                case Edge.East: _eastScan.Add(hash); break;
-                case Edge.North: _northScan.Add(hash); break;
-                case Edge.West: _westScan.Add(hash); break;
+                case Edge.South:
+                    _rowsUsedFromSouth.Add(coords.x);
+                    break;
+                case Edge.East:
+                    _colsUsedFromEast.Add(coords.y);
+                    break;
+                case Edge.North:
+                    _rowsUsedFromNorth.Add(coords.x);
+                    break;
+                case Edge.West:
+                    _colsUsedFromWest.Add(coords.y);
+                    break;
             }
         }
     }

@@ -42,6 +42,7 @@ namespace PackNFlow
         {
             public float unitGridZOffsetByCellSize;
             public float pullDuration;
+            public float depleteDuration;
             public float unitBoardDuration;
             public float unitBoardScale;
             public float unitBoardArcHeight;

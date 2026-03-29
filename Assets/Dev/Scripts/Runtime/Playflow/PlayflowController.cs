@@ -99,7 +99,7 @@ namespace PackNFlow
 
             BlockScanner.Sweep(
                 unitController.ActiveUnitsList,
-                pixelBlockController.TryFindBlockForUnit,
+                pixelBlockController.GatherBlocksForUnit,
                 unitController.TryPullBlock
             );
         }
