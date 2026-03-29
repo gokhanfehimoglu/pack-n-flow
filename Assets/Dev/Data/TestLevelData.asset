@@ -84,7 +84,7 @@ MonoBehaviour:
     ColorId: 0
   - Coordinates: {x: 4, y: 4}
     ColorId: 0
-  unitColumnCount: 5
+  unitColumnCount: 3
   unitColumnDepth: 5
   unitGridCellSize: 1.75
   rackSlotCount: 5
@@ -96,32 +96,42 @@ MonoBehaviour:
       TetheredUnitId: -1
       Coordinates: {x: 0, y: 0}
       IsConcealed: 0
-  - entries:
     - Id: 1
       PullCapacity: 5
       ColorId: 2
       TetheredUnitId: -1
-      Coordinates: {x: 1, y: 0}
+      Coordinates: {x: 0, y: 1}
       IsConcealed: 0
-  - entries:
     - Id: 2
-      PullCapacity: 5
-      ColorId: 0
+      PullCapacity: 4
+      ColorId: 2
       TetheredUnitId: -1
-      Coordinates: {x: 2, y: 0}
+      Coordinates: {x: 0, y: 2}
       IsConcealed: 0
   - entries:
     - Id: 3
-      PullCapacity: 8
+      PullCapacity: 4
       ColorId: 2
       TetheredUnitId: -1
-      Coordinates: {x: 3, y: 0}
+      Coordinates: {x: 1, y: 0}
       IsConcealed: 0
-  - entries:
     - Id: 4
       PullCapacity: 2
       ColorId: 1
       TetheredUnitId: -1
-      Coordinates: {x: 4, y: 0}
+      Coordinates: {x: 1, y: 1}
+      IsConcealed: 0
+    - Id: 5
+      PullCapacity: 3
+      ColorId: 0
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 2}
+      IsConcealed: 0
+  - entries:
+    - Id: 6
+      PullCapacity: 2
+      ColorId: 0
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 0}
       IsConcealed: 0
   conveyorCarriageCount: 5
