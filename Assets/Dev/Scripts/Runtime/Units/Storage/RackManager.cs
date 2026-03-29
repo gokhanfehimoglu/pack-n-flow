@@ -6,6 +6,7 @@ namespace PackNFlow
     public class RackManager : MonoBehaviour
     {
         [SerializeField] private SlotPiece rackSlotPrefab;
+        [SerializeField] private Transform pivot;
         
         public IReadOnlyList<SlotPiece> Racks { get; private set; }
         private SlotPiece[] _racks;
@@ -20,7 +21,7 @@ namespace PackNFlow
 
             for (var i = 0; i < positions.Length; i++)
             {
-                var piece = Instantiate(rackSlotPrefab, transform);
+                var piece = Instantiate(rackSlotPrefab, pivot);
                 piece.transform.position = positions[i];
                 // piece.transform.localScale = Vector3.one;
                 _racks[i] = piece;
@@ -33,7 +34,11 @@ namespace PackNFlow
         {
             if (_racks == null) return;
             for (var i = _racks.Length - 1; i >= 0; i--)
-                DestroyImmediate(_racks[i]);
+            {
+                if (_racks[i] != null)
+                    DestroyImmediate(_racks[i].gameObject);
+            }
+            _racks = null;
         }
     }
 }
