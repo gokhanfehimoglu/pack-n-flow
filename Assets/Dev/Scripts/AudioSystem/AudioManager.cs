@@ -68,8 +68,17 @@ namespace PackNFlow.AudioSystem
 				var track = tracks[i];
 				if (track.CanPlayOver)
 				{
-					track.AudioSourcePool = new ObjectPool<AudioSource>(() => Instantiate(track.AudioSourcePrefab, transform), source => source.gameObject.SetActive(true),
-						source => source.gameObject.SetActive(false), source => Destroy(source.gameObject), false, minPlayingAudioAtATime, maxPlayingAudioAtATime);
+					track.AudioSourcePool = new ObjectPool<AudioSource>(() => Instantiate(track.AudioSourcePrefab, transform), source =>
+						{
+							if (source != null) source.gameObject.SetActive(true);
+						},
+						source =>
+						{
+							if (source != null) source.gameObject.SetActive(false);
+						}, source =>
+						{
+							if (source != null && source.gameObject != null) Destroy(source.gameObject);
+						}, false, minPlayingAudioAtATime, maxPlayingAudioAtATime);
 				}
 			}
 
