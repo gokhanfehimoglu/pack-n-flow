@@ -1,0 +1,661 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fbd9998d0c2e2245b5995ca68d1df08, type: 3}
+  m_Name: TestLevelData
+  m_EditorClassIdentifier: Assembly-CSharp::PackNFlow.LevelData
+  referenceTexture: {fileID: 2800000, guid: 882777db48e493e4db3215b337f34509, type: 3}
+  enableColorGrouping: 1
+  palette:
+  - Id: 0
+    Color:
+      serializedVersion: 2
+      rgba: 4282879487
+    UnitColorToken: 0
+  - Id: 1
+    Color:
+      serializedVersion: 2
+      rgba: 4281096351
+    UnitColorToken: 1
+  - Id: 2
+    Color:
+      serializedVersion: 2
+      rgba: 4279973473
+    UnitColorToken: 2
+  - Id: 3
+    Color:
+      serializedVersion: 2
+      rgba: 4282285022
+    UnitColorToken: 3
+  - Id: 4
+    Color:
+      serializedVersion: 2
+      rgba: 4280567163
+    UnitColorToken: 4
+  - Id: 5
+    Color:
+      serializedVersion: 2
+      rgba: 4280763767
+    UnitColorToken: 5
+  - Id: 6
+    Color:
+      serializedVersion: 2
+      rgba: 4282879230
+    UnitColorToken: 6
+  - Id: 7
+    Color:
+      serializedVersion: 2
+      rgba: 4283651677
+    UnitColorToken: 7
+  - Id: 8
+    Color:
+      serializedVersion: 2
+      rgba: 4294896605
+    UnitColorToken: 8
+  - Id: 9
+    Color:
+      serializedVersion: 2
+      rgba: 4294894799
+    UnitColorToken: 9
+  - Id: 10
+    Color:
+      serializedVersion: 2
+      rgba: 4294829263
+    UnitColorToken: 10
+  - Id: 11
+    Color:
+      serializedVersion: 2
+      rgba: 4283010815
+    UnitColorToken: 11
+  - Id: 12
+    Color:
+      serializedVersion: 2
+      rgba: 4283717985
+    UnitColorToken: 12
+  - Id: 13
+    Color:
+      serializedVersion: 2
+      rgba: 4294752112
+    UnitColorToken: 13
+  - Id: 14
+    Color:
+      serializedVersion: 2
+      rgba: 4281407744
+    UnitColorToken: 14
+  - Id: 15
+    Color:
+      serializedVersion: 2
+      rgba: 4293825075
+    UnitColorToken: 15
+  - Id: 16
+    Color:
+      serializedVersion: 2
+      rgba: 4283010556
+    UnitColorToken: 16
+  - Id: 17
+    Color:
+      serializedVersion: 2
+      rgba: 4293040752
+    UnitColorToken: 17
+  - Id: 18
+    Color:
+      serializedVersion: 2
+      rgba: 4279502592
+    UnitColorToken: 18
+  - Id: 19
+    Color:
+      serializedVersion: 2
+      rgba: 4286196993
+    UnitColorToken: 19
+  - Id: 20
+    Color:
+      serializedVersion: 2
+      rgba: 4283075578
+    UnitColorToken: 20
+  - Id: 21
+    Color:
+      serializedVersion: 2
+      rgba: 4283137227
+    UnitColorToken: 21
+  - Id: 22
+    Color:
+      serializedVersion: 2
+      rgba: 4286288592
+    UnitColorToken: 22
+  - Id: 23
+    Color:
+      serializedVersion: 2
+      rgba: 4286479270
+    UnitColorToken: 23
+  - Id: 24
+    Color:
+      serializedVersion: 2
+      rgba: 4292960845
+    UnitColorToken: 24
+  - Id: 25
+    Color:
+      serializedVersion: 2
+      rgba: 4291524268
+    UnitColorToken: 25
+  - Id: 26
+    Color:
+      serializedVersion: 2
+      rgba: 4285375472
+    UnitColorToken: 26
+  - Id: 27
+    Color:
+      serializedVersion: 2
+      rgba: 4289841619
+    UnitColorToken: 27
+  - Id: 28
+    Color:
+      serializedVersion: 2
+      rgba: 4294081904
+    UnitColorToken: 28
+  - Id: 29
+    Color:
+      serializedVersion: 2
+      rgba: 4293458941
+    UnitColorToken: 29
+  - Id: 30
+    Color:
+      serializedVersion: 2
+      rgba: 4293195775
+    UnitColorToken: 30
+  - Id: 31
+    Color:
+      serializedVersion: 2
+      rgba: 4294965429
+    UnitColorToken: 31
+  - Id: 32
+    Color:
+      serializedVersion: 2
+      rgba: 4294963375
+    UnitColorToken: 32
+  - Id: 33
+    Color:
+      serializedVersion: 2
+      rgba: 4293708234
+    UnitColorToken: 33
+  - Id: 34
+    Color:
+      serializedVersion: 2
+      rgba: 4286696402
+    UnitColorToken: 34
+  - Id: 35
+    Color:
+      serializedVersion: 2
+      rgba: 4288928737
+    UnitColorToken: 35
+  - Id: 36
+    Color:
+      serializedVersion: 2
+      rgba: 4293459455
+    UnitColorToken: 36
+  blockZoneWidth: 10
+  blockZoneHeight: 10
+  blockZoneCellSize: 0.25
+  blockEntries:
+  - Coordinates: {x: 0, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 2, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 3, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 4, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 5, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 6, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 7, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 8, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 9, y: 0}
+    ColorId: 0
+  - Coordinates: {x: 0, y: 1}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 1}
+    ColorId: 1
+  - Coordinates: {x: 2, y: 1}
+    ColorId: 2
+  - Coordinates: {x: 3, y: 1}
+    ColorId: 3
+  - Coordinates: {x: 4, y: 1}
+    ColorId: 0
+  - Coordinates: {x: 5, y: 1}
+    ColorId: 0
+  - Coordinates: {x: 6, y: 1}
+    ColorId: 0
+  - Coordinates: {x: 7, y: 1}
+    ColorId: 3
+  - Coordinates: {x: 8, y: 1}
+    ColorId: 2
+  - Coordinates: {x: 9, y: 1}
+    ColorId: 1
+  - Coordinates: {x: 0, y: 2}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 2}
+    ColorId: 4
+  - Coordinates: {x: 2, y: 2}
+    ColorId: 5
+  - Coordinates: {x: 3, y: 2}
+    ColorId: 5
+  - Coordinates: {x: 4, y: 2}
+    ColorId: 5
+  - Coordinates: {x: 5, y: 2}
+    ColorId: 6
+  - Coordinates: {x: 6, y: 2}
+    ColorId: 5
+  - Coordinates: {x: 7, y: 2}
+    ColorId: 5
+  - Coordinates: {x: 8, y: 2}
+    ColorId: 5
+  - Coordinates: {x: 9, y: 2}
+    ColorId: 4
+  - Coordinates: {x: 0, y: 3}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 3}
+    ColorId: 7
+  - Coordinates: {x: 2, y: 3}
+    ColorId: 8
+  - Coordinates: {x: 3, y: 3}
+    ColorId: 9
+  - Coordinates: {x: 4, y: 3}
+    ColorId: 10
+  - Coordinates: {x: 5, y: 3}
+    ColorId: 11
+  - Coordinates: {x: 6, y: 3}
+    ColorId: 10
+  - Coordinates: {x: 7, y: 3}
+    ColorId: 9
+  - Coordinates: {x: 8, y: 3}
+    ColorId: 8
+  - Coordinates: {x: 9, y: 3}
+    ColorId: 7
+  - Coordinates: {x: 0, y: 4}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 4}
+    ColorId: 12
+  - Coordinates: {x: 2, y: 4}
+    ColorId: 13
+  - Coordinates: {x: 3, y: 4}
+    ColorId: 14
+  - Coordinates: {x: 4, y: 4}
+    ColorId: 15
+  - Coordinates: {x: 5, y: 4}
+    ColorId: 16
+  - Coordinates: {x: 6, y: 4}
+    ColorId: 15
+  - Coordinates: {x: 7, y: 4}
+    ColorId: 14
+  - Coordinates: {x: 8, y: 4}
+    ColorId: 13
+  - Coordinates: {x: 9, y: 4}
+    ColorId: 12
+  - Coordinates: {x: 0, y: 5}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 5}
+    ColorId: 12
+  - Coordinates: {x: 2, y: 5}
+    ColorId: 17
+  - Coordinates: {x: 3, y: 5}
+    ColorId: 18
+  - Coordinates: {x: 4, y: 5}
+    ColorId: 19
+  - Coordinates: {x: 5, y: 5}
+    ColorId: 20
+  - Coordinates: {x: 6, y: 5}
+    ColorId: 19
+  - Coordinates: {x: 7, y: 5}
+    ColorId: 18
+  - Coordinates: {x: 8, y: 5}
+    ColorId: 17
+  - Coordinates: {x: 9, y: 5}
+    ColorId: 12
+  - Coordinates: {x: 0, y: 6}
+    ColorId: 0
+  - Coordinates: {x: 1, y: 6}
+    ColorId: 21
+  - Coordinates: {x: 2, y: 6}
+    ColorId: 22
+  - Coordinates: {x: 3, y: 6}
+    ColorId: 23
+  - Coordinates: {x: 4, y: 6}
+    ColorId: 24
+  - Coordinates: {x: 5, y: 6}
+    ColorId: 25
+  - Coordinates: {x: 6, y: 6}
+    ColorId: 24
+  - Coordinates: {x: 7, y: 6}
+    ColorId: 23
+  - Coordinates: {x: 8, y: 6}
+    ColorId: 22
+  - Coordinates: {x: 9, y: 6}
+    ColorId: 21
+  - Coordinates: {x: 0, y: 7}
+    ColorId: 26
+  - Coordinates: {x: 1, y: 7}
+    ColorId: 26
+  - Coordinates: {x: 2, y: 7}
+    ColorId: 27
+  - Coordinates: {x: 3, y: 7}
+    ColorId: 28
+  - Coordinates: {x: 4, y: 7}
+    ColorId: 29
+  - Coordinates: {x: 5, y: 7}
+    ColorId: 30
+  - Coordinates: {x: 6, y: 7}
+    ColorId: 29
+  - Coordinates: {x: 7, y: 7}
+    ColorId: 28
+  - Coordinates: {x: 8, y: 7}
+    ColorId: 27
+  - Coordinates: {x: 9, y: 7}
+    ColorId: 26
+  - Coordinates: {x: 0, y: 8}
+    ColorId: 31
+  - Coordinates: {x: 1, y: 8}
+    ColorId: 31
+  - Coordinates: {x: 2, y: 8}
+    ColorId: 32
+  - Coordinates: {x: 3, y: 8}
+    ColorId: 33
+  - Coordinates: {x: 4, y: 8}
+    ColorId: 34
+  - Coordinates: {x: 5, y: 8}
+    ColorId: 35
+  - Coordinates: {x: 6, y: 8}
+    ColorId: 34
+  - Coordinates: {x: 7, y: 8}
+    ColorId: 33
+  - Coordinates: {x: 8, y: 8}
+    ColorId: 32
+  - Coordinates: {x: 9, y: 8}
+    ColorId: 31
+  - Coordinates: {x: 0, y: 9}
+    ColorId: 31
+  - Coordinates: {x: 1, y: 9}
+    ColorId: 31
+  - Coordinates: {x: 2, y: 9}
+    ColorId: 32
+  - Coordinates: {x: 3, y: 9}
+    ColorId: 33
+  - Coordinates: {x: 4, y: 9}
+    ColorId: 36
+  - Coordinates: {x: 5, y: 9}
+    ColorId: 36
+  - Coordinates: {x: 6, y: 9}
+    ColorId: 36
+  - Coordinates: {x: 7, y: 9}
+    ColorId: 33
+  - Coordinates: {x: 8, y: 9}
+    ColorId: 32
+  - Coordinates: {x: 9, y: 9}
+    ColorId: 31
+  unitColumnCount: 3
+  unitColumnDepth: 5
+  unitGridCellSize: 1.5
+  rackSlotCount: 5
+  columnDataList:
+  - entries:
+    - Id: 0
+      PullCapacity: 10
+      ColorId: 0
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 0}
+      IsConcealed: 0
+    - Id: 3
+      PullCapacity: 3
+      ColorId: 36
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 1}
+      IsConcealed: 0
+    - Id: 6
+      PullCapacity: 2
+      ColorId: 3
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 2}
+      IsConcealed: 0
+    - Id: 9
+      PullCapacity: 2
+      ColorId: 7
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 3}
+      IsConcealed: 0
+    - Id: 12
+      PullCapacity: 3
+      ColorId: 26
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 4}
+      IsConcealed: 0
+    - Id: 15
+      PullCapacity: 4
+      ColorId: 33
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 5}
+      IsConcealed: 0
+    - Id: 18
+      PullCapacity: 5
+      ColorId: 5
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 6}
+      IsConcealed: 0
+    - Id: 21
+      PullCapacity: 2
+      ColorId: 8
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 7}
+      IsConcealed: 0
+    - Id: 24
+      PullCapacity: 2
+      ColorId: 22
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 8}
+      IsConcealed: 0
+    - Id: 27
+      PullCapacity: 2
+      ColorId: 29
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 9}
+      IsConcealed: 0
+    - Id: 30
+      PullCapacity: 2
+      ColorId: 10
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 10}
+      IsConcealed: 0
+    - Id: 33
+      PullCapacity: 2
+      ColorId: 18
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 11}
+      IsConcealed: 0
+    - Id: 36
+      PullCapacity: 1
+      ColorId: 25
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 12}
+      IsConcealed: 0
+    - Id: 39
+      PullCapacity: 2
+      ColorId: 19
+      TetheredUnitId: -1
+      Coordinates: {x: 0, y: 13}
+      IsConcealed: 0
+  - entries:
+    - Id: 1
+      PullCapacity: 5
+      ColorId: 0
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 0}
+      IsConcealed: 0
+    - Id: 4
+      PullCapacity: 2
+      ColorId: 1
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 1}
+      IsConcealed: 0
+    - Id: 7
+      PullCapacity: 4
+      ColorId: 0
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 2}
+      IsConcealed: 0
+    - Id: 10
+      PullCapacity: 4
+      ColorId: 12
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 3}
+      IsConcealed: 0
+    - Id: 13
+      PullCapacity: 1
+      ColorId: 31
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 4}
+      IsConcealed: 0
+    - Id: 16
+      PullCapacity: 2
+      ColorId: 34
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 5}
+      IsConcealed: 0
+    - Id: 19
+      PullCapacity: 1
+      ColorId: 5
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 6}
+      IsConcealed: 0
+    - Id: 22
+      PullCapacity: 2
+      ColorId: 13
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 7}
+      IsConcealed: 0
+    - Id: 25
+      PullCapacity: 2
+      ColorId: 27
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 8}
+      IsConcealed: 0
+    - Id: 28
+      PullCapacity: 1
+      ColorId: 30
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 9}
+      IsConcealed: 0
+    - Id: 31
+      PullCapacity: 1
+      ColorId: 11
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 10}
+      IsConcealed: 0
+    - Id: 34
+      PullCapacity: 2
+      ColorId: 23
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 11}
+      IsConcealed: 0
+    - Id: 37
+      PullCapacity: 2
+      ColorId: 15
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 12}
+      IsConcealed: 0
+    - Id: 40
+      PullCapacity: 1
+      ColorId: 20
+      TetheredUnitId: -1
+      Coordinates: {x: 1, y: 13}
+      IsConcealed: 0
+  - entries:
+    - Id: 2
+      PullCapacity: 5
+      ColorId: 31
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 0}
+      IsConcealed: 0
+    - Id: 5
+      PullCapacity: 2
+      ColorId: 2
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 1}
+      IsConcealed: 0
+    - Id: 8
+      PullCapacity: 2
+      ColorId: 4
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 2}
+      IsConcealed: 0
+    - Id: 11
+      PullCapacity: 2
+      ColorId: 21
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 3}
+      IsConcealed: 0
+    - Id: 14
+      PullCapacity: 4
+      ColorId: 32
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 4}
+      IsConcealed: 0
+    - Id: 17
+      PullCapacity: 1
+      ColorId: 35
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 5}
+      IsConcealed: 0
+    - Id: 20
+      PullCapacity: 1
+      ColorId: 6
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 6}
+      IsConcealed: 0
+    - Id: 23
+      PullCapacity: 2
+      ColorId: 17
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 7}
+      IsConcealed: 0
+    - Id: 26
+      PullCapacity: 2
+      ColorId: 28
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 8}
+      IsConcealed: 0
+    - Id: 29
+      PullCapacity: 2
+      ColorId: 9
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 9}
+      IsConcealed: 0
+    - Id: 32
+      PullCapacity: 2
+      ColorId: 14
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 10}
+      IsConcealed: 0
+    - Id: 35
+      PullCapacity: 2
+      ColorId: 24
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 11}
+      IsConcealed: 0
+    - Id: 38
+      PullCapacity: 1
+      ColorId: 16
+      TetheredUnitId: -1
+      Coordinates: {x: 2, y: 12}
+      IsConcealed: 0
+  conveyorCarriageCount: 5

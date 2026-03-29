@@ -223,7 +223,7 @@ namespace PackNFlow
             _boardSeq.Append(transform.DOLocalRotate(new Vector3(0, 360, 0), duration, RotateMode.FastBeyond360));
             _boardSeq.Join(transform.DOLocalMoveY(1.5f, duration).SetEase(Ease.OutQuad));
             _boardSeq.Join(transform.DOScale(Vector3.zero, duration).SetEase(Ease.InBack));
-            _boardSeq.OnComplete(() => gameObject.SetActive(false));
+            _boardSeq.OnComplete(() => Destroy(gameObject));
             _boardSeq.SetLink(gameObject);
         }
 

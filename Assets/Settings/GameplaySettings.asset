@@ -18,7 +18,7 @@ MonoBehaviour:
     carriageFromConveyorDuration: 0.5
     carriageFollowSpeed: 5
   units:
-    unitGridZOffsetByCellSize: 5.33
+    unitGridZOffsetByCellSize: 5.78
     pullDuration: 0.4
     depleteDuration: 0.2
     unitBoardDuration: 0.5

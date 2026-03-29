@@ -153,6 +153,8 @@ namespace PackNFlow
 
         private void HandleUnitPathCompleted(Unit unit)
         {
+            if (unit == null || !unit.gameObject.activeSelf) return;
+            
             unitController.RemoveActiveUnit(unit);
             unitController.ReadyCarriageCount++;
 

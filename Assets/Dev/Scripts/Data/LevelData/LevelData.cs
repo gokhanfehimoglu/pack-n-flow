@@ -21,7 +21,7 @@ namespace PackNFlow
         [Title("Unit Area")]
         public int unitColumnCount = 3;
         public int unitColumnDepth = 40;
-        public float unitGridCellSize = 1f;
+        public float unitGridCellSize = 1.5f;
         public int rackSlotCount = 5;
         public List<UnitColumnData> columnDataList;
 
