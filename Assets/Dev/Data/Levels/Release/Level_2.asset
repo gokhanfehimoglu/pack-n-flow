@@ -611,7 +611,7 @@ MonoBehaviour:
       Coordinates: {x: 4, y: 1}
       IsConcealed: 0
     - Id: 16
-      PullCapacity: 21
+      PullCapacity: 16
       ColorId: 0
       TetheredUnitId: -1
       Coordinates: {x: 4, y: 2}
