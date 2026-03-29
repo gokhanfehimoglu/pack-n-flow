@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using PackNFlow.AudioSystem;
 
 namespace PackNFlow
 {
@@ -184,6 +185,7 @@ namespace PackNFlow
 
         public void TriggerPull(PixelBlock target, Edge side)
         {
+            AudioManager.Instance.PlayAudio(AudioName.Pull);
             ScanData.SealLine(side, target.Data.Coordinates);
             _remainingCapacity--;
 

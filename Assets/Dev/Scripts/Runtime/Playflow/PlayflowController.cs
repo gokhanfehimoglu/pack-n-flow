@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using PackNFlow.Core;
+using PackNFlow.AudioSystem;
 
 namespace PackNFlow
 {
@@ -108,12 +109,12 @@ namespace PackNFlow
 
         private void EnterCleared()
         {
-            Debug.Log("Level cleared!");
+            AudioManager.Instance.PlayAudio(AudioName.Win);
         }
 
         private void EnterFailed()
         {
-            Debug.Log("Level failed.");
+            AudioManager.Instance.PlayAudio(AudioName.Lose);
         }
 
         private void HandleUnitDeployRequest(Unit unit, bool skipInterval)
@@ -130,6 +131,7 @@ namespace PackNFlow
             unitController.ReadyCarriageCount--;
             unitController.AddActiveUnit(unit);
 
+            AudioManager.Instance.PlayAudio(AudioName.ToConveyor);
             unit.OnBoardingCompleted += OnUnitBoarded;
             unit.BoardTheCarriage(carriage);
 
@@ -172,6 +174,7 @@ namespace PackNFlow
             }
             else
             {
+                AudioManager.Instance.PlayAudio(AudioName.ToRackSlot);
                 unit.LeaveConveyor();
             }
 

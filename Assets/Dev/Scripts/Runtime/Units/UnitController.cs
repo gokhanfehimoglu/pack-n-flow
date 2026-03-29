@@ -223,14 +223,21 @@ namespace PackNFlow
         {
             _activeUnits.Clear();
 
-            foreach (var unit in _allUnits)
-                DestroyImmediate(unit.gameObject);
+            for (int i = _allUnits.Count - 1; i >= 0; i--)
+            {
+                if (_allUnits[i] != null && _allUnits[i].gameObject != null)
+                    DestroyImmediate(_allUnits[i].gameObject);
+            }
             _allUnits.Clear();
 
-            foreach (var t in _tethers)
+            for (int i = _tethers.Count - 1; i >= 0; i--)
             {
-                t.Disconnect();
-                DestroyImmediate(t.gameObject);
+                if (_tethers[i] != null)
+                {
+                    _tethers[i].Disconnect();
+                    if (_tethers[i].gameObject != null)
+                        DestroyImmediate(_tethers[i].gameObject);
+                }
             }
             _tethers.Clear();
         }
