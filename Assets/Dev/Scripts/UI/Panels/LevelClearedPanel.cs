@@ -13,9 +13,9 @@ namespace PackNFlow.UI
             continueButton.onClick.AddListener(OnContinueClicked);
         }
 
-        private void OnContinueClicked()
+        private static void OnContinueClicked()
         {
-            GameBootstrap.Instance.Playflow.TransitionTo(PlayflowState.Active);
+            GameBootstrap.Instance.Playflow.TransitionTo(PlayflowState.Home);
         }
 
         private void OnDestroy()

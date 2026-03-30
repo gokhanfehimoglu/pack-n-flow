@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using PackNFlow.Core;
+using UnityEngine.SceneManagement;
 
 namespace PackNFlow
 {
@@ -31,6 +32,8 @@ namespace PackNFlow
         {
             if (e.CurrentState == PlayflowState.Cleared)
                 _progression.Advance();
+            else if (e.CurrentState == PlayflowState.Home)
+                SceneManager.LoadScene("Dev/Scenes/Home");
         }
 
         private void OnDestroy()

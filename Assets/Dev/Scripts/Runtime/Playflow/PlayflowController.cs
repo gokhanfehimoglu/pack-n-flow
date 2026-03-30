@@ -22,7 +22,7 @@ namespace PackNFlow
         private GameBootstrap _bootstrap;
         private LevelDirector _levelDirector;
 
-        private PlayflowState _state = PlayflowState.Menu;
+        private PlayflowState _state = PlayflowState.Home;
         private float _lastDeployTime;
         private Dictionary<PlayflowState, Action> _stateHandlers;
 

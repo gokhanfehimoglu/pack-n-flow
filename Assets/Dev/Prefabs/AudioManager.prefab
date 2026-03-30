@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2451764766181357188}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2451764766181357191
 MonoBehaviour:
@@ -47,16 +47,24 @@ MonoBehaviour:
   minPlayingAudioAtATime: 25
   maxPlayingAudioAtATime: 50
   tracks:
-  - Name: SFX
-    AudioSourcePrefab: {fileID: 152900401002307180, guid: 865d8dcca00124b79918d00446dc074a, type: 3}
+  - AudioSourcePrefab: {fileID: 152900401002307180, guid: 865d8dcca00124b79918d00446dc074a, type: 3}
     ActiveAudioSource: {fileID: 0}
     CanPlayOver: 1
     Audios:
       _serializedList:
-      - Key: -1
-        Value: {fileID: 0}
-  - Name: Music
-    AudioSourcePrefab: {fileID: 5458974145386491207, guid: 9e1ed01cef9ce4a008f7d16af7973136, type: 3}
+      - Key: 5
+        Value: {fileID: 8300000, guid: 5c3114e57af7d4446a50f48b1a10a43a, type: 3}
+      - Key: 0
+        Value: {fileID: 8300000, guid: 8deddfa4bb0b43846bda493f33a59077, type: 3}
+      - Key: 1
+        Value: {fileID: 8300000, guid: f7c87b9a8e8e29047a340234de9f9810, type: 3}
+      - Key: 2
+        Value: {fileID: 8300000, guid: 2d4e9670dec3d2d40a6437cc145c5d3e, type: 3}
+      - Key: 3
+        Value: {fileID: 8300000, guid: 50c2ea8972a34c641b141d3e0f9f2ad8, type: 3}
+      - Key: 4
+        Value: {fileID: 8300000, guid: b2f70e378fc93bb4aaeac8b5c337d77c, type: 3}
+  - AudioSourcePrefab: {fileID: 5458974145386491207, guid: 9e1ed01cef9ce4a008f7d16af7973136, type: 3}
     ActiveAudioSource: {fileID: 0}
     CanPlayOver: 0
     Audios:

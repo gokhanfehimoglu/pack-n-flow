@@ -12,6 +12,7 @@ namespace PackNFlow.AudioSystem
 		Lose,
 		ToConveyor,
 		ToRackSlot,
-		Pull
+		Pull,
+		ButtonClick
 	}
 }

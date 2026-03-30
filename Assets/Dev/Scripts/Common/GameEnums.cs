@@ -16,7 +16,7 @@ namespace PackNFlow
     
     public enum PlayflowState
     {
-        Menu,
+        Home,
         Active,
         Cleared,
         Failed

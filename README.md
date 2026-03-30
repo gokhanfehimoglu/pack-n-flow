@@ -4,4 +4,4 @@
 
 Built with **Unity 6.3 LTS (6000.3.11f1)**.
 
-Open `Assets/Dev/Scenes/Gameplay.unity` and hit play.
+Open `Assets/Dev/Scenes/Home.unity` and hit play.
