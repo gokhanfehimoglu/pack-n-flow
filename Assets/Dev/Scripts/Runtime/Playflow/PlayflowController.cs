@@ -168,9 +168,12 @@ namespace PackNFlow
 
             if (!rackController.TryStoreUnit(unit))
             {
-                Debug.Log("Storage rack is full!");
-                unit.LeaveConveyor();
-                TransitionTo(PlayflowState.Failed);
+                if (_state == PlayflowState.Active)
+                {
+                    Debug.Log("Storage rack is full!");
+                    unit.LeaveConveyor();
+                    TransitionTo(PlayflowState.Failed);
+                }
             }
             else
             {
