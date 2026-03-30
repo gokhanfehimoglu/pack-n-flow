@@ -4,4 +4,6 @@
 
 Built with **Unity 6.3 LTS (6000.3.11f1)**.
 
-Open `Assets/Dev/Scenes/Home.unity` and hit play.
+Open `Assets/Dev/Scenes/Home.unity` and hit play
+
+Gameplay video: [https://youtube.com/shorts/srYuVJ7wLoY](https://youtube.com/shorts/srYuVJ7wLoY)
